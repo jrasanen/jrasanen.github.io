@@ -28,7 +28,7 @@ body {
 }
 
 .wrapper {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   line-height: 2.2rem;
   .home {
     border: 1px solid #D0E5F8;
@@ -49,7 +49,7 @@ body {
   height: 300px;
   border-radius: 4px;
   margin-bottom: 150px;
-  
+
   .profile {
     text-align: center;
     position: relative;
@@ -69,21 +69,21 @@ body {
 }
 
 .resume {
-  
+
   h2 {
     margin-top: 2em;
     padding-bottom: 10px;
     border-bottom: 1px solid $grey-color-light;
   }
-  
+
   header {
     display: inline-block;
   }
-  
+
   .resume-col, .opening {
     font-size: 0.9rem;
   }
-  
+
   .resume-col {
     margin-left: 255px;
 
@@ -117,7 +117,7 @@ body {
       margin-top: 0.33em;
     }
   }
-  
+
   @include media-query($on-palm) {
     .portrait {
       float: none;
@@ -126,7 +126,7 @@ body {
       margin-left: 0;
     }
   }
-  
+
   hr {
     display: block;
     height: 1px;
@@ -175,11 +175,11 @@ body {
       margin-bottom: 0;
     }
   }
-  
+
   .employment:last-child {
     border-bottom: 0;
   }
-  
+
   .edu {
     margin-bottom: 1em;
     h4 {
@@ -192,7 +192,7 @@ body {
       font-size: 0.8em;
     }
   }
-  
+
 }
 
 .site-nav {
@@ -413,4 +413,26 @@ body {
             font-size: 18px;
         }
     }
+}
+
+
+
+@media print {
+  body {
+    background: #fff;
+  }
+  .site-header {
+    margin-top: 0 !important;
+  }
+  .wrapper {
+    max-width: 100% !important;
+  }
+  .wrapper .home {
+    border: 0 !important;
+    padding: 0 !important;
+    background: transparent;
+  }
+  .site-footer, .site-nav {
+    display: none !important;
+  }
 }
